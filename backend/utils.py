@@ -5,7 +5,7 @@ Created on 2019-01-28-10-33
 Author: Stephan Rasp, raspstephan@gmail.com
 """
 from .imports import *
-
+import joblib
 
 def return_var_bool(ds, var_list):
     """
@@ -60,6 +60,12 @@ def load_pickle(fn):
         obj = pickle.load(f)
     return obj
 
+
+def save_pickle_model(fn,obj):
+    joblib.dump(obj,fn)
+    
+def load_pickle_model(fn):
+    return joblib.load(fn)
 
 def split_variables(x):
     """Hard-coded variable split for 21 lev"""
