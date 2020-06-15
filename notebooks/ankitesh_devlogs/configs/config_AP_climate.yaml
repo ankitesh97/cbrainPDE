@@ -1,0 +1,40 @@
+
+name: 'Climate BP'
+
+# ; Values
+dt: 1800
+dx: 10
+scaling: 30
+blocks: [0,1,2,3,4,5,6,7,8,9,10] 
+# ; Network Parameters
+kernel_size: 5
+max_diff_order: 2
+acc_order: 2
+n_hidden_layers: 2
+n_channels: 1
+n_non_eqn_channels: 4
+
+# ; Data
+dataname: 'Climate BP'
+batch_size: 48
+total: -1
+channel_names: 'QBP'
+channel_vars: ['QBP']
+non_eqn_channels: ['LHFLX','SHFLX','PS','SOLIN']
+dependent_channels: ['TBP']
+
+data_file: '/oasis/scratch/comet/ankitesh/temp_project/PDEExp/data/preprocessed_pde_cluster_1.nc'
+Nt: 240 
+Nx: 100
+
+# ; Others 
+
+sparsity: 0.005
+momentsparsity: 0.004
+epochs: 1000
+model_dir: '/Users/ankitesh/Desktop/RA_data/'
+seed: -1
+learning_rate: 0.01
+constraint: 'moment'
+optimizer: 'LBFGS'
+#note: if using LBFGS as the optimizer epochs should be kept between (200-300) (Suggested by the experiments I carried out)
