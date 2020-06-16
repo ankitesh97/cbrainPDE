@@ -32,7 +32,7 @@ Nx: 100
 sparsity: 0.005
 momentsparsity: 0.004
 epochs: 1000
-model_dir: '/Users/ankitesh/Desktop/RA_data/'
+model_dir: '/oasis/scratch/comet/ankitesh/temp_project/PDEExp/'
 seed: -1
 learning_rate: 0.01
 constraint: 'moment'
